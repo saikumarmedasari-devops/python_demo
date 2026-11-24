@@ -14,3 +14,8 @@ variable "allowed_cidr" {
   description = "Your public IP address in CIDR format"
   type        = string
 }
+
+variable "key_pair_name" {
+  description = "Existing AWS EC2 key pair name"
+  type        = string
+}
