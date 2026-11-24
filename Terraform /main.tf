@@ -78,6 +78,10 @@ resource "aws_instance" "python_app" {
   subnet_id              = data.aws_subnets.default.ids[0]
   vpc_security_group_ids = [aws_security_group.python_app_sg.id]
 
+# Attach EC2 Key Pair
+  key_name = var.key_pair_name
+
+
   user_data = <<-EOF
     #!/bin/bash
     set -eux
